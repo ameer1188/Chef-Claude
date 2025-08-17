@@ -16,18 +16,18 @@ const Main = () => {
     }
 
     return(
-        <main className="items-center justify-center sm:p-4">
-           <form  onSubmit={handleSubmit} className="flex focus:within:scale-105 items-center py-10 px-10" action="">
+        <main className="items-center justify-center p-4">
+           <form  onSubmit={handleSubmit} className="flex focus:within:scale-105 items-center justify-center py-10 px-10 w-auto sm:" action="">
             <input 
                 type="text" 
                 placeholder="e.g oregano"
                 aria-label="add incredient"
                 name="ingredient"
-                className="w-auto sm:w-50 h-13 px-4 py-2  border border-gray-300 font-semibold 
+                className="w-auto sm:w-1/3 md:w-1/3 lg:w-1/2 h-13 px-4 py-2  border border-gray-300 font-semibold 
                 focus:outline-none focus:ring-blue-500 rounded-tl-2xl rounded-bl-2xl "
             />
             <button
-            className="  w-auto sm:w-40 md:w-52 lg:w-52 h-13 px-4 py-2 bg-indigo-800 
+            className="  w-auto sm:w-40 md:w-50 lg:w-60 h-13 px-4 py-2 bg-indigo-800 
             text-white font-semibold whitespace-nowrap
             rounded-tr-2xl rounded-br-2xl hover:bg-indigo-900 transition hover:scale-105 before:content-['+'] before:mr-2 "
             >Add ingredient</button>
