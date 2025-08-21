@@ -1,7 +1,7 @@
 import React  from "react"
 
 const Main = () => {
-    const ingredients = ["Chiken", "Oregano", "Tomatoes"]
+    const [ingredients, setIngredients] = React.useState([])
 
     const ingredientsListItems = ingredients.map(ingredient => (
         <li key={ingredient}>{ingredient}</li>
@@ -11,12 +11,11 @@ const Main = () => {
         event.preventDefault()
         const formData = new FormData(event.currentTarget)
         const newIngredient = formData.get("ingredient")
-        ingredients.push(newIngredient)
-        console.log(ingredients)
+        setIngredients(prevIngredients => [...prevIngredients, newIngredient])
     }
 
     return(
-        <main className="items-center justify-center p-4">
+        <main className="items-center justify-center m-10">
            <form  onSubmit={handleSubmit} className="flex focus:within:scale-105 items-center justify-center py-10 px-10 w-auto sm:" action="">
             <input 
                 type="text" 
